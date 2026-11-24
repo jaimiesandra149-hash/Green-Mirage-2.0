@@ -6,49 +6,46 @@
 
 **Beyond Renewable Growth. Understanding the Energy Transition.**
 
-<br>
+[![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)](https://pandas.pydata.org/)
+[![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)](https://numpy.org/)
+[![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge)](https://matplotlib.org/)
+[![Scikit-learn](https://img.shields.io/badge/Scikit--learn-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white)](https://scikit-learn.org/)
 
-[![Python](https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org/)
-[![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-150458?style=for-the-badge&logo=pandas&logoColor=white)](https://pandas.pydata.org/)
-[![Scikit-learn](https://img.shields.io/badge/Scikit--learn-Machine%20Learning-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white)](https://scikit-learn.org/)
-[![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-F37626?style=for-the-badge&logo=jupyter&logoColor=white)](https://jupyter.org/)
-
-<br>
-
-**DATA SCIENCE · MACHINE LEARNING · ENERGY ANALYTICS · CLIMATE RESEARCH**
+**DATA SCIENCE · MACHINE LEARNING · ENERGY ANALYTICS**
 
 </div>
 
 ---
 
-## 🔎 THE RESEARCH QUESTION
+## 🔍 THE QUESTION BEHIND THE PROJECT
 
-> **Are countries genuinely transitioning away from fossil fuels, or are renewable energy sources simply expanding alongside growing energy demand?**
+> Are countries genuinely transitioning away from fossil fuels, or are renewable energy sources simply expanding alongside growing energy demand?
 
-Renewable energy is expanding across the world. But does increasing renewable energy adoption necessarily mean that fossil fuel dependence is declining?
+Renewable energy adoption is increasing around the world. But an increase in renewable energy does not automatically mean that fossil fuel dependence is decreasing.
 
-**Green Mirage 2.0** investigates this question through historical energy data, statistical analysis, country-level comparisons, and machine learning.
+**Green Mirage 2.0** explores this distinction using historical energy data, statistical analysis, country comparisons, and machine learning.
 
-The goal is to look beyond renewable energy growth and explore what is actually happening within the global energy landscape.
+The project looks beyond renewable energy growth to investigate broader changes in the global energy system.
 
----
+## ⚡ PROJECT AT A GLANCE
 
-## ⚡ PROJECT OVERVIEW
-
-| Component | Description |
+| Research Component | Approach |
 |:---|:---|
-| 🌱 Energy Analytics | Renewable and fossil fuel trend analysis |
-| 🌎 Country Comparison | Five-country comparative case study |
-| 🧮 Feature Engineering | Derived energy-transition indicators |
-| 🧩 Clustering | K-Means country segmentation |
-| 🤖 Prediction | Next-year renewable energy share modelling |
-| 📊 Evaluation | MAE, RMSE and R² |
+| Energy trend analysis | Exploratory Data Analysis |
+| Country comparisons | Five-country case study |
+| Feature development | Feature Engineering |
+| Country segmentation | K-Means Clustering |
+| Dimensionality reduction | Principal Component Analysis |
+| Renewable share prediction | Linear Regression |
+| Nonlinear prediction | Random Forest Regression |
+| Model evaluation | MAE, RMSE, R² |
 
 ---
 
-## 🌍 COUNTRIES UNDER INVESTIGATION
+## 🌎 COUNTRIES UNDER INVESTIGATION
 
-The comparative case study focuses on five countries with different energy profiles and geographical contexts.
+The comparative case study focuses on five countries:
 
 | Country | Region |
 |:---|:---|
@@ -58,141 +55,135 @@ The comparative case study focuses on five countries with different energy profi
 | 🇧🇷 Brazil | South America |
 | 🇺🇸 United States | North America |
 
-The clustering and predictive workflows also consider other eligible countries with sufficient observations.
+The clustering and predictive modelling workflows additionally use eligible global country observations where sufficient data is available.
 
 ---
 
-## 🧠 ANALYTICAL FRAMEWORK
+## 🧠 RESEARCH METHODOLOGY
 
-The project follows a multi-stage analytical pipeline.
+### 01 — Data Collection & Preparation
 
-```mermaid
-flowchart TD
-    A["🌐 Our World in Data"] --> B["Data Collection"]
-    B --> C["Data Cleaning & Preprocessing"]
-    C --> D["Exploratory Data Analysis"]
-    D --> E["Feature Engineering"]
-    E --> F["K-Means Clustering"]
-    E --> G["Predictive Modelling"]
-    G --> H["Linear Regression"]
-    G --> I["Random Forest"]
-    G --> J["Previous-Year Baseline"]
-    F --> K["Country Pattern Analysis"]
-    H --> L["Model Evaluation"]
-    I --> L
-    J --> L
-    K --> M["Research Interpretation"]
-    L --> M
-```
+Historical energy data is obtained from Our World in Data.
 
-### 01 — Data Collection & Preprocessing
+The preprocessing workflow includes:
 
-- Historical country-level energy observations.
-- Missing-value inspection and treatment.
-- Duplicate removal and data type conversion.
-- Preparation of country-year datasets.
+- Dataset inspection and exploration.
+- Missing-value analysis.
+- Duplicate removal.
+- Numerical data preparation.
+- Selection of relevant energy indicators.
 
 ### 02 — Exploratory Data Analysis
 
-Investigating:
+The project investigates:
 
 - Renewable energy share trends.
 - Fossil fuel energy share trends.
-- Energy consumption patterns.
+- Changes in energy consumption.
 - Country-level differences.
-- Changes in energy growth over time.
+- Energy growth patterns over time.
 
 ### 03 — Feature Engineering
 
-Developing additional indicators to investigate energy-transition patterns:
+Additional indicators are developed to examine relationships between renewable and fossil energy.
 
-- Renewable-to-fossil share gap.
-- Renewable-to-fossil share ratio.
-- Per-capita energy consumption.
-- GDP per capita, where available.
-- Year-over-year growth.
+| Feature | Purpose |
+|:---|:---|
+| Renewable–fossil share gap | Compare the two energy shares |
+| Renewable-to-fossil ratio | Examine their relative proportions |
+| Per-capita energy consumption | Explore energy use relative to population |
+| GDP per capita | Include an economic indicator where available |
+| Year-over-year growth | Examine changes over time |
 
-### 04 — Unsupervised Learning
+### 04 — Unsupervised Machine Learning
 
 **K-Means Clustering**
 
-Identifying groups of countries with similar energy characteristics.
+Countries are grouped according to similarities in selected energy characteristics.
 
-Techniques:
-- Feature scaling.
+The workflow includes:
+
+- Feature selection.
 - Missing-value imputation.
-- Cluster selection analysis.
-- Principal Component Analysis (PCA).
+- Standardisation.
+- Cluster selection using silhouette scores.
+- PCA-based cluster visualisation.
 
-### 05 — Supervised Learning
+### 05 — Predictive Modelling
 
-Exploring next-year renewable energy share prediction using:
+The project explores one-year-ahead renewable energy share prediction.
 
-| Model | Purpose |
+Three approaches are compared:
+
+| Model | Role |
 |:---|:---|
-| Linear Regression | Linear prediction baseline |
-| Random Forest Regression | Nonlinear prediction |
-| Previous-Year Baseline | Persistence comparison |
+| Linear Regression | Regression model |
+| Random Forest | Nonlinear regression model |
+| Previous-Year Baseline | Persistence benchmark |
+
+The models use a chronological train-test split to evaluate predictions on later target years.
 
 ### 06 — Model Evaluation
 
-Model performance is examined using:
+Predictive performance is assessed using:
 
-- Mean Absolute Error (MAE)
-- Root Mean Squared Error (RMSE)
-- Coefficient of Determination (R²)
+- **MAE:** Mean Absolute Error
+- **RMSE:** Root Mean Squared Error
+- **R²:** Coefficient of Determination
 
-A chronological train-test split is used to evaluate performance on later target years.
+The models are compared against the previous-year baseline rather than being evaluated in isolation.
 
 ---
 
-## 📊 VISUAL RESEARCH OUTPUTS
+## 📊 PROJECT OUTPUTS
 
-The repository includes visualizations generated during the analysis.
+The analysis generates visualisations and exported research tables.
 
-Add your actual chart previews below:
-
-| Analysis | Visualization |
+| Output | Contents |
 |:---|:---|
-| Global energy trends | `visualizations/your_chart.png` |
-| Country comparison | `visualizations/your_chart.png` |
-| Energy transition clustering | `visualizations/your_chart.png` |
-| Model evaluation | `visualizations/your_chart.png` |
+| Visualisations | Energy trends, country comparisons and model charts |
+| Country summaries | Comparative energy indicators |
+| Clustering results | Country-level cluster assignments |
+| Model results | Prediction and evaluation metrics |
+| Feature analysis | Variables used in the predictive workflow |
 
-*Replace these example paths with the actual chart filenames.*
+**Explore the project files:**
+
+- 📈 [Visualisations](visualizations/)
+- 📁 [Research Results](results/)
+- 💻 [Research Notebook](notebooks/)
 
 ---
 
 ## 🛠️ TECHNOLOGY STACK
 
-| Tool | Application |
+| Technology | Application |
 |:---|:---|
-| Python | Core programming |
-| Pandas | Data manipulation |
-| NumPy | Numerical operations |
-| Matplotlib | Data visualization |
-| Seaborn | Statistical visualization |
-| Scikit-learn | Machine learning |
-| Google Colab | Development |
-| GitHub | Version control |
+| Python | Core programming language |
+| Pandas | Data manipulation and analysis |
+| NumPy | Numerical computations |
+| Matplotlib | Data visualisation |
+| Seaborn | Statistical visualisation |
+| Scikit-learn | Machine learning and evaluation |
+| Google Colab | Notebook development and execution |
 
 ---
 
-## 📁 PROJECT ARCHITECTURE
+## 📂 PROJECT STRUCTURE
 
 ```text
 GREEN-MIRAGE-2.0/
 │
-├── 📄 README.md
-├── 📄 requirements.txt
+├── README.md
+├── requirements.txt
 │
-├── 📂 notebooks/
+├── notebooks/
 │   └── Green_Mirage_2.0.ipynb
 │
-├── 📂 visualizations/
-│   └── Research charts and figures
+├── visualizations/
+│   └── Generated charts and figures
 │
-└── 📂 results/
+└── results/
     └── Exported CSV files
 ```
 
@@ -204,47 +195,38 @@ GREEN-MIRAGE-2.0/
 
 https://ourworldindata.org/energy
 
-The project uses historical energy indicators to investigate country-level energy patterns.
+The project uses historical country-level energy indicators from this dataset.
 
 ---
 
-## 🔭 FUTURE DIRECTIONS
+## 🔭 FUTURE SCOPE
 
-Potential extensions of this research include:
-
-- Investigating absolute fossil fuel consumption alongside renewable energy growth.
-- Expanding the analysis to additional countries.
-- Incorporating more economic and environmental indicators.
-- Exploring longer-term forecasting techniques.
-- Developing an interactive energy-transition intelligence dashboard.
+- Analyse absolute fossil fuel consumption alongside renewable energy growth.
+- Expand comparative analysis to additional countries.
+- Include additional economic and environmental indicators.
+- Explore more advanced time-series forecasting methods.
+- Develop an interactive energy transition analytics dashboard.
 
 ---
 
-## ⚠️ RESEARCH LIMITATIONS
+## ⚠️ LIMITATIONS
 
-- Historical patterns do not guarantee future outcomes.
-- Data availability differs between countries.
-- Clustering results depend on feature selection and preprocessing.
-- Predictive performance must be interpreted using the evaluation results.
+- Historical trends do not guarantee future outcomes.
+- Country comparisons are affected by differences in data availability.
+- Clustering depends on the selected features and preprocessing.
+- Predictive performance depends on the available observations.
 - Feature importance does not establish causation.
-- Renewable energy share growth alone does not establish a reduction in absolute fossil fuel consumption.
+- Increasing renewable energy share alone does not demonstrate an absolute reduction in fossil fuel consumption.
 
 ---
 
 <div align="center">
 
-## 🌱 THE IDEA BEHIND GREEN MIRAGE
+### 🌱 LOOK BEYOND THE GROWTH.
 
-*Is the world replacing fossil fuels, or simply adding more energy sources to an expanding energy system?*
+**Understand the transition.**
 
-**Looking beyond the numbers. Understanding the transition.**
+*Green Mirage 2.0 — Exploring what the global energy numbers actually reveal.*
 
 </div>
-
----
-
-**Project:** Green Mirage 2.0  
-**Domain:** Data Science · Energy Analytics · Machine Learning  
-**Language:** Python  
-**Dataset:** Our World in Data
 
