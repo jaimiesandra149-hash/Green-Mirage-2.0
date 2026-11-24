@@ -1,0 +1,72 @@
+
+GREEN MIRAGE 2.0
+GLOBAL ENERGY TRANSITION INTELLIGENCE SYSTEM
+
+PROJECT CONCLUSION
+==================
+
+Green Mirage 2.0 investigated renewable energy growth
+and fossil-fuel dependence using data from Our World
+in Data.
+
+The detailed country analysis focused on:
+
+India, China, Germany, Brazil and the United States.
+
+The project applied data cleaning, exploratory analysis,
+feature engineering, visualization and Machine Learning.
+
+RESEARCH FINDINGS
+-----------------
+
+The five-country comparison identified:
+
+Highest average renewable share:
+Brazil
+
+Highest average fossil-fuel share:
+India
+
+MACHINE LEARNING
+----------------
+
+Clustering groups identified:
+3
+
+Best-performing evaluated approach:
+Linear Regression
+
+MAE:
+0.7002
+
+RMSE:
+1.0859
+
+R2:
+0.9919
+
+RESEARCH LIMITATIONS
+--------------------
+
+1. Historical data availability differs across countries.
+2. The analysis does not establish causal relationships.
+3. Country clustering depends on selected features.
+4. Prediction performance depends on the available
+   observations and the chronological test period.
+5. Model performance must be compared with simple
+   baseline approaches.
+
+OVERALL CONCLUSION
+------------------
+
+The project demonstrates how Data Science and Machine
+Learning can be applied to investigate energy transition
+patterns and evaluate historical relationships between
+renewable and fossil-fuel energy indicators.
+
+The results should be interpreted as exploratory
+evidence rather than definitive forecasts of future
+national energy policies.
+
+Dataset:
+Our World in Data - Global Energy Dataset.

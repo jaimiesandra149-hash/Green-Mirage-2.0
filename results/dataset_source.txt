@@ -1,0 +1,21 @@
+
+PROJECT: GREEN MIRAGE 2.0
+
+DATASET:
+Our World in Data - Global Energy Dataset
+
+SOURCE:
+https://catalog.ourworldindata.org/garden/energy/2026-09-10/owid_energy/owid_energy.csv
+
+COUNTRIES:
+India, China, Germany, Brazil, United States
+
+STUDY PERIOD:
+2000 to 2025
+
+NOTE:
+Only observations available in the original dataset
+are included. Missing values are not automatically
+treated as zero.
+
+The original dataset is retrieved directly from OWID.
